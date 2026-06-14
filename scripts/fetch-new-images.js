@@ -1,4 +1,4 @@
-/* Re-fetch the 5 nano_banana_pro images (text-free). Overwrites same files. */
+/* Re-fetch interior images matched to the real salon. Overwrites same files. */
 const sharp = require("sharp");
 const path = require("path");
 
@@ -6,11 +6,8 @@ const C = "https://d8j0ntlcm91z4.cloudfront.net/user_37DILVqiW7dfub7Y3zgrbddlXQx
 const OUT = path.join(__dirname, "..", "assets", "img");
 
 const imgs = [
-  { file: "gallery-nails.jpg",  url: `${C}/hf_20260614_214745_d550f61e-8a2e-4547-80bc-399dfff981fc.png`, w: 1200 },
-  { file: "gallery-glam.jpg",   url: `${C}/hf_20260614_214750_a9931836-1815-4d3d-b77e-024ac0fa4768.png`, w: 1200 },
-  { file: "gallery-facial.jpg", url: `${C}/hf_20260614_214755_680b7b47-f10f-444b-930a-b8bb66e1ae56.png`, w: 1200 },
-  { file: "insta-skin.jpg",     url: `${C}/hf_20260614_214800_2946ee74-4127-44f2-af3c-b9a4dcdeda19.png`, w: 1000 },
-  { file: "insta-glam.jpg",     url: `${C}/hf_20260614_214805_414dacf9-7caa-4ba3-9cfa-1c6bc1c32c06.png`, w: 1000 },
+  { file: "interior.jpg",         url: `${C}/hf_20260614_215330_87ce3839-ae2d-4a9f-82eb-c22af694d988.png`, w: 1680 },
+  { file: "gallery-interior.jpg", url: `${C}/hf_20260614_215338_ab36ecdc-3027-4a5f-9fb2-7eb5737dac6b.png`, w: 1680 },
 ];
 
 (async () => {
