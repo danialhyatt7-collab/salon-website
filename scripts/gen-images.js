@@ -91,7 +91,7 @@ const jobs = [
   { file: "hair.jpg", w: 1200, h: 1500, label: "Balayage", sub: "HAIR ATELIER", a1: "#caa45a", a2: "#7a5a32", gx: 56, gy: 44, seed: 33 },
   { file: "facial.jpg", w: 1200, h: 1500, label: "Glow Rituals", sub: "HYDRAFACIAL", a1: "#e9d9bf", a2: "#a98e63", gx: 44, gy: 40, seed: 44 },
   { file: "nails.jpg", w: 1200, h: 1200, label: "Nail Atelier", sub: "GEL · EXTENSIONS", a1: "#d9b878", a2: "#8a6a3c", gx: 52, gy: 46, seed: 55 },
-  { file: "interior.jpg", w: 1600, h: 1100, label: "The Atelier", sub: "F-7 MARKAZ", a1: "#b89255", a2: "#6e5230", gx: 62, gy: 40, seed: 66 },
+  { file: "interior.jpg", w: 1600, h: 1100, label: "The Atelier", sub: "CHAK SHAHZAD", a1: "#b89255", a2: "#6e5230", gx: 62, gy: 40, seed: 66 },
 ];
 
 (async () => {

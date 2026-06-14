@@ -6,7 +6,7 @@
 
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
-  const WHATSAPP = "923000000000"; // <-- replace with the salon's real number
+  const WHATSAPP = "923365060785"; // salon's WhatsApp number
 
   /* ---------- Preloader ---------- */
   window.addEventListener("load", () => {
