@@ -180,21 +180,20 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
 .nav { display: flex; align-items: center; justify-content: space-between; padding-block: 1.1rem; }
 .site-header.is-scrolled .nav { padding-block: 0.7rem; }
 
-.brand { display: inline-flex; align-items: center; gap: 0.95rem; }
-.brand__mark { display: block; height: 40px; width: auto; flex: none; }
-.brand__mark path, .brand__mark text { transition: stroke 0.4s ease, fill 0.4s ease; }
-.brand:hover .brand__mark path { stroke: var(--champagne); }
-.brand:hover .brand__mark text { fill: var(--champagne); }
-.brand__text { display: flex; flex-direction: column; gap: 0.2rem; line-height: 1; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; }
+.brand__mark { display: block; height: 22px; width: 22px; flex: none; }
+.brand__mark path { transition: fill 0.4s ease; }
+.brand:hover .brand__mark path { fill: var(--champagne); }
+.brand__text { display: flex; flex-direction: column; gap: 0.18rem; line-height: 1; }
 .brand__name {
   font-family: var(--serif); font-weight: 500;
-  font-size: 1rem; text-transform: uppercase; letter-spacing: 0.2em;
+  font-size: 1.3rem; letter-spacing: 0.03em;
   color: var(--cream);
 }
 .brand__sub {
-  font-family: var(--sans); font-size: 0.54rem; font-weight: 400;
-  letter-spacing: 0.46em; text-transform: uppercase; color: var(--bronze);
-  padding-left: 0.06em;
+  font-family: var(--sans); font-size: 0.55rem; font-weight: 400;
+  letter-spacing: 0.44em; text-transform: uppercase; color: var(--bronze);
+  padding-left: 0.08em;
 }
 
 .nav__links { display: flex; gap: 2.1rem; }
