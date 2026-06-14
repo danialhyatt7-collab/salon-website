@@ -181,21 +181,10 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
 .site-header.is-scrolled .nav { padding-block: 0.7rem; }
 
 .brand { display: inline-flex; align-items: center; gap: 0.95rem; }
-.brand__mark {
-  position: relative; display: grid; place-items: center;
-  height: 40px; padding: 0 0.05rem 0 0.18rem;
-  border: none; border-radius: 0;
-  font-family: var(--serif); font-weight: 500; font-style: normal;
-  font-size: 1.5rem; line-height: 1; letter-spacing: 0.12em;
-  color: var(--gold);
-}
-.brand__mark::before, .brand__mark::after {
-  content: ""; position: absolute; left: 50%; transform: translateX(-50%);
-  width: 28px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--bronze) 50%, transparent);
-}
-.brand__mark::before { top: 0; }
-.brand__mark::after { bottom: 0; }
+.brand__mark { display: block; height: 40px; width: auto; flex: none; }
+.brand__mark path, .brand__mark text { transition: stroke 0.4s ease, fill 0.4s ease; }
+.brand:hover .brand__mark path { stroke: var(--champagne); }
+.brand:hover .brand__mark text { fill: var(--champagne); }
 .brand__text { display: flex; flex-direction: column; gap: 0.2rem; line-height: 1; }
 .brand__name {
   font-family: var(--serif); font-weight: 500;
