@@ -1,0 +1,15 @@
+{
+  "name": "salon-of-beauty-islamabad",
+  "version": "1.0.0",
+  "description": "World-class dark-luxury website for Salon of Beauty Islamabad.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "images": "node scripts/gen-images.js"
+  },
+  "keywords": ["salon", "islamabad", "bridal", "luxury", "beauty"],
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.35.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Salon of Beauty Islamabad",
+  "short_name": "Salon of Beauty",
+  "description": "Islamabad's premier luxury salon for bridal, hair and skin.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0807",
+  "theme_color": "#0a0807",
+  "icons": [
+    { "src": "/assets/img/icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
