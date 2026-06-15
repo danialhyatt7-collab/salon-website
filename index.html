@@ -665,9 +665,12 @@
         <div class="booking glass reveal" id="booking">
           <h3 class="booking__title">Book Your Appointment</h3>
           <p class="booking__sub">Tell us what you need — we'll confirm your slot within the day.</p>
-          <form class="booking__form" id="bookingForm" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-            <input type="hidden" name="form-name" value="booking" />
-            <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+          <form class="booking__form" id="bookingForm" novalidate>
+            <!-- Web3Forms: replace the value below with your own free access key from https://web3forms.com -->
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="New Appointment Request — Salon of Beauty" />
+            <input type="hidden" name="from_name" value="Salon of Beauty Website" />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
             <div class="field">
               <label for="bk-name">Full name</label>
               <input id="bk-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />

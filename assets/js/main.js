@@ -223,11 +223,11 @@
     }
     const data = new FormData(form);
 
-    // 1) Save the lead to Netlify Forms (recorded in dashboard + email notification).
-    fetch("/", {
+    // 1) Email the lead via Web3Forms (host-independent: works on Hostinger, etc.).
+    fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries(data)),
     }).catch(() => {});
 
     // 2) Also open WhatsApp pre-filled for instant chat.
