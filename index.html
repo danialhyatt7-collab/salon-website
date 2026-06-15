@@ -36,7 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="assets/css/styles.css?v=11" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=12" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -94,45 +94,57 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="siteHeader">
     <div class="container nav">
-      <a href="#top" class="brand" aria-label="Salon of Beauty — home">
-        <svg class="brand__mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 1 Q13.4 10.6 23 12 Q13.4 13.4 12 23 Q10.6 13.4 1 12 Q10.6 10.6 12 1 Z" fill="#c9a24b"/></svg>
-        <span class="brand__text">
-          <span class="brand__name">Salon of Beauty</span>
-          <span class="brand__sub">Islamabad</span>
-        </span>
-      </a>
-
       <nav class="nav__links" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#bridal">Bridal</a>
-        <a href="#pricing">Pricing</a>
         <a href="#gallery">Gallery</a>
-        <a href="#journal">Experience</a>
+        <a href="#journal">About</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="nav__cta">
-        <a href="#booking" class="btn btn--ghost" data-book>Book Appointment</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+      <a href="#top" class="emblem" aria-label="Salon of Beauty — home">
+        <span class="emblem__rays" aria-hidden="true"></span>
+        <span class="emblem__core" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="13" height="13"><path d="M12 2 Q13.2 10.8 22 12 Q13.2 13.2 12 22 Q10.8 13.2 2 12 Q10.8 10.8 12 2 Z" fill="#c9a24b"/></svg>
+        </span>
+      </a>
+
+      <div class="nav__actions">
+        <div class="nav__socials" aria-label="Follow us">
+          <a class="social" href="https://www.instagram.com/salonofbeautyisb/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social" href="https://wa.me/923365060785" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 .4C7.4.4.5 7.3.5 15.9c0 2.8.7 5.4 2 7.8L.4 31.6l8.2-2.1c2.2 1.2 4.8 1.9 7.4 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.4 16 .4zm0 28.2c-2.4 0-4.6-.6-6.5-1.8l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.3-2-2-4.4-2-6.9C3 8.9 8.9 3.1 16 3.1S29 8.9 29 16 23.1 28.6 16 28.6zm8-9.4c-.4-.2-2.6-1.3-3-1.4-.4-.1-.7-.2-1 .2s-1.1 1.4-1.4 1.7c-.3.3-.5.3-.9.1-2.4-1.2-4-2.1-5.6-4.8-.4-.7.4-.7 1.2-2.2.1-.3.1-.5 0-.7s-1-2.4-1.4-3.3c-.4-.9-.7-.7-1-.8h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 4 1.7 4.2c.2.3 2.9 4.5 7.1 6.3 2.6 1.1 3.7 1.2 5 1 .8-.1 2.6-1.1 2.9-2.1.4-1 .4-1.9.3-2.1-.1-.2-.4-.3-.8-.5z"/></svg></a>
+          <a class="social" href="tel:+923365060785" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 4h3l2 5-2.4 1.5a11 11 0 0 0 5 5L14 13l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+        </div>
+        <button class="menu-btn" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="menu-btn__label"></span>
+          <span class="menu-btn__dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <nav class="mobile-menu__links" aria-label="Mobile">
-      <a href="#services">Services</a>
-      <a href="#bridal">Bridal</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#journal">Experience</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a href="#booking" class="btn btn--gold" data-book>Book Appointment</a>
-    </nav>
-    <p class="mobile-menu__foot">Chak Shahzad, Islamabad · Open daily 11–9</p>
+  <!-- Full-screen menu -->
+  <div class="menu-overlay" id="mobileMenu" aria-hidden="true">
+    <div class="menu-overlay__inner">
+      <nav class="mobile-menu__links" aria-label="Menu">
+        <a href="#services"><span>Services</span></a>
+        <a href="#bridal"><span>Bridal</span></a>
+        <a href="#pricing"><span>Pricing</span></a>
+        <a href="#gallery"><span>Gallery</span></a>
+        <a href="#journal"><span>About</span></a>
+        <a href="#faq"><span>FAQ</span></a>
+        <a href="#contact"><span>Contact</span></a>
+      </nav>
+      <div class="menu-overlay__meta">
+        <a href="#booking" class="btn btn--gold" data-book>Book Appointment <span class="btn__arrow">→</span></a>
+        <div class="menu-overlay__socials">
+          <a href="https://www.instagram.com/salonofbeautyisb/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/923365060785" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+923365060785">Call</a>
+        </div>
+        <p class="menu-overlay__foot">House #3, Lane 9B, Park Road, Chak Shahzad, Islamabad · Open daily 11–9</p>
+      </div>
+    </div>
   </div>
 
   <main id="top">
