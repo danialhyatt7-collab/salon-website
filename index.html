@@ -36,7 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=11" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -665,7 +665,9 @@
         <div class="booking glass reveal" id="booking">
           <h3 class="booking__title">Book Your Appointment</h3>
           <p class="booking__sub">Tell us what you need — we'll confirm your slot within the day.</p>
-          <form class="booking__form" id="bookingForm" novalidate>
+          <form class="booking__form" id="bookingForm" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="booking" />
+            <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
             <div class="field">
               <label for="bk-name">Full name</label>
               <input id="bk-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />

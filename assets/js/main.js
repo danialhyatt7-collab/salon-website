@@ -222,6 +222,15 @@
       return;
     }
     const data = new FormData(form);
+
+    // 1) Save the lead to Netlify Forms (recorded in dashboard + email notification).
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString(),
+    }).catch(() => {});
+
+    // 2) Also open WhatsApp pre-filled for instant chat.
     const msg =
       `*New Appointment Request — Salon of Beauty*%0A%0A` +
       `👤 Name: ${encodeURIComponent(data.get("name"))}%0A` +
@@ -230,7 +239,7 @@
       `📅 Date: ${encodeURIComponent(data.get("date") || "Flexible")}%0A` +
       `⏰ Time: ${encodeURIComponent(data.get("time") || "Any")}%0A` +
       `📝 Notes: ${encodeURIComponent(data.get("note") || "—")}`;
-    showToast("Opening WhatsApp to confirm your booking…");
+    showToast("Request sent! Opening WhatsApp to confirm…");
     setTimeout(() => {
       window.open(`https://wa.me/${WHATSAPP}?text=${msg}`, "_blank", "noopener");
     }, 700);
