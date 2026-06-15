@@ -196,7 +196,7 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
   padding-left: 0.08em;
 }
 
-.nav__links { display: flex; gap: 2rem; justify-self: start; }
+.nav__links { display: flex; gap: 2rem; justify-self: start; grid-column: 1; }
 .nav__links a {
   font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-soft);
   position: relative; padding-block: 0.3rem; transition: color 0.3s;
@@ -209,7 +209,7 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
 .nav__links a:hover::after { width: 100%; }
 
 /* Center radial emblem */
-.emblem { position: relative; width: 46px; height: 46px; display: grid; place-items: center; justify-self: center; }
+.emblem { position: relative; width: 46px; height: 46px; display: grid; place-items: center; justify-self: center; grid-column: 2; }
 .emblem__rays {
   position: absolute; inset: 0; border-radius: 50%;
   background: repeating-conic-gradient(var(--gold) 0deg 1.5deg, transparent 1.5deg 9deg);
@@ -223,7 +223,7 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
 @keyframes emblemSpin { to { transform: rotate(360deg); } }
 
 /* Right actions: socials + menu */
-.nav__actions { display: flex; align-items: center; gap: 1rem; justify-self: end; }
+.nav__actions { display: flex; align-items: center; gap: 1rem; justify-self: end; grid-column: 3; }
 .nav__socials { display: flex; gap: 0.5rem; }
 .social {
   width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
@@ -643,6 +643,7 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
 @media (max-width: 860px) {
   .nav__links { display: none; }
   .nav__socials { display: none; }
+  .emblem { grid-column: 1; justify-self: start; }
   .intro__grid, .process__grid, .faq__grid, .contact__grid { grid-template-columns: 1fr; }
   .process__grid { gap: 2.5rem; }
   .bridal__grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; }
@@ -675,7 +676,7 @@ section { padding-block: clamp(4.5rem, 9vw, 9rem); position: relative; }
   .hero__actions { margin-top: 1.5rem; gap: 0.6rem; }
   .hero__actions .btn { width: 100%; justify-content: center; }
   .hero__trust { margin-top: 1.5rem; }
-  .hero { min-height: 92svh; align-items: flex-start; padding-top: 6.5rem; padding-bottom: 3rem; }
+  .hero { min-height: 92svh; align-items: flex-start; padding-top: 6.5rem; padding-bottom: 6.5rem; }
   .section-sub { font-size: 0.96rem; }
   .footer__grid { grid-template-columns: 1fr; gap: 1.6rem; }
 }
