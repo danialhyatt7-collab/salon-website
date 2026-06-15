@@ -3,6 +3,18 @@
   publish = "."
   command = ""
 
+# Always revalidate HTML so visitors get the latest version immediately.
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Versioned assets (cache-busted via ?v=) can be cached long.
 [[headers]]
   for = "/assets/css/*"
   [headers.values]
