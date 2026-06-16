@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patient Safety Complaint — Dialysis Incident, Hearts International Hospital, Rawalpindi</title>
+<meta name="description" content="A formal patient-safety complaint to the Punjab Healthcare Commission regarding a death during dialysis on 27 December 2025 at Hearts International Hospital, Rawalpindi. A call for an independent investigation." />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Patient Safety Complaint — Dialysis Incident" />
+<meta property="og:description" content="A formal complaint to the Punjab Healthcare Commission seeking an independent investigation into dialysis monitoring, staffing, response delay and CCTV handling." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#03070b;
+    --bg-2:#06101a;
+    --ink:#e8f4f8;
+    --muted:#8aa6b4;
+    --faint:#5a7280;
+    --accent:#37e0e8;
+    --accent-2:#1aa7c4;
+    --line:rgba(120,200,220,.14);
+    --panel:rgba(13,30,42,.55);
+    --panel-line:rgba(120,200,220,.16);
+    --danger:#ff7a8a;
+    --maxw:1080px;
+    --display:'Space Grotesk',sans-serif;
+    --body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* ambient glow background */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(60% 50% at 78% 18%, rgba(55,224,232,.18), transparent 60%),
+      radial-gradient(50% 50% at 12% 85%, rgba(26,167,196,.12), transparent 60%),
+      linear-gradient(180deg,#03070b 0%,#040c14 45%,#03070b 100%);
+    z-index:-2;
+  }
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:linear-gradient(rgba(120,200,220,.035) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(120,200,220,.035) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(75% 75% at 50% 30%,#000,transparent 90%);
+    z-index:-1;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(3,7,11,.6);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;letter-spacing:.18em;font-size:.82rem}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent),0 0 4px #fff}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{
+    font-family:var(--display);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    border:1px solid var(--panel-line);border-radius:40px;padding:11px 22px;color:var(--ink);
+    transition:.25s;
+  }
+  .nav-cta:hover{border-color:var(--accent);box-shadow:0 0 20px rgba(55,224,232,.25);color:var(--accent)}
+  .menu-btn{display:none;background:none;border:0;color:var(--ink);font-size:1.4rem;cursor:pointer}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:110px 0 90px;overflow:hidden}
+  .ring{
+    position:absolute;right:-60px;top:50%;transform:translateY(-50%);
+    width:520px;height:520px;border-radius:50%;
+    border:2px solid rgba(55,224,232,.5);
+    box-shadow:0 0 60px rgba(55,224,232,.35),inset 0 0 80px rgba(55,224,232,.18);
+    animation:pulse 6s ease-in-out infinite;
+    pointer-events:none;
+  }
+  .ring::after{
+    content:"";position:absolute;inset:34px;border-radius:50%;
+    border:1px solid rgba(55,224,232,.18);
+  }
+  @keyframes pulse{0%,100%{opacity:.85;transform:translateY(-50%) scale(1)}50%{opacity:1;transform:translateY(-50%) scale(1.03)}}
+  .eyebrow{
+    font-family:var(--display);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:26px;display:flex;align-items:center;gap:14px;
+  }
+  .eyebrow::before{content:"";width:40px;height:1px;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  .hero h1{
+    font-family:var(--display);font-weight:700;line-height:1.04;
+    font-size:clamp(2.6rem,7vw,5.4rem);letter-spacing:.04em;
+    max-width:14ch;
+    text-shadow:0 0 40px rgba(55,224,232,.12);
+  }
+  .hero h1 .glow{color:var(--accent);text-shadow:0 0 30px rgba(55,224,232,.55)}
+  .hero p.lead{max-width:56ch;color:var(--muted);font-size:1.06rem;margin-top:26px}
+  .hero .meta{margin-top:30px;color:var(--faint);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-family:var(--display)}
+  .actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:40px}
+  .btn{
+    font-family:var(--display);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;
+    padding:15px 28px;border-radius:40px;cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:10px;
+  }
+  .btn-primary{background:var(--accent);color:#02161a;font-weight:600;box-shadow:0 0 30px rgba(55,224,232,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 44px rgba(55,224,232,.6)}
+  .btn-ghost{border:1px solid var(--panel-line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ---------- stat strip ---------- */
+  .strip{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:rgba(6,16,26,.5);backdrop-filter:blur(6px);
+  }
+  .strip .grid{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat{padding:30px 24px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat .n{font-family:var(--display);font-weight:700;font-size:1.7rem;color:var(--accent)}
+  .stat .l{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-top:6px;font-family:var(--display)}
+
+  /* ---------- sections ---------- */
+  section.block{padding:84px 0;position:relative}
+  .section-head{margin-bottom:44px}
+  .section-head .kicker{font-family:var(--display);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px}
+  .section-head h2{font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,3.6vw,2.6rem);letter-spacing:.02em;max-width:20ch}
+  .section-head p{color:var(--muted);max-width:62ch;margin-top:16px}
+
+  .panel{
+    background:var(--panel);border:1px solid var(--panel-line);border-radius:16px;
+    padding:30px;backdrop-filter:blur(8px);
+  }
+  .lede-panel{font-size:1.12rem;color:var(--ink);line-height:1.85}
+  .lede-panel strong{color:var(--accent);font-weight:600}
+
+  /* timeline */
+  .timeline{position:relative;margin-top:10px;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;
+    background:linear-gradient(180deg,var(--accent),rgba(55,224,232,.1))}
+  .tl{position:relative;padding:0 0 34px}
+  .tl:last-child{padding-bottom:0}
+  .tl::before{content:"";position:absolute;left:-34px;top:4px;width:20px;height:20px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 14px rgba(55,224,232,.5)}
+  .tl .t{font-family:var(--display);font-weight:600;color:var(--accent);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+  .tl .b{color:var(--muted);margin-top:6px}
+  .tl.critical::before{border-color:var(--danger);box-shadow:0 0 14px rgba(255,122,138,.55)}
+  .tl.critical .t{color:var(--danger)}
+
+  /* failure cards */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .card{
+    background:var(--panel);border:1px solid var(--panel-line);border-radius:14px;padding:26px;
+    transition:.3s;backdrop-filter:blur(8px);
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(55,224,232,.4);box-shadow:0 14px 40px rgba(0,0,0,.4)}
+  .card .num{font-family:var(--display);font-weight:700;font-size:1.1rem;color:var(--accent-2);opacity:.7}
+  .card h3{font-family:var(--display);font-weight:600;font-size:1.08rem;margin:10px 0 8px;letter-spacing:.01em}
+  .card p{color:var(--muted);font-size:.95rem}
+
+  /* request list */
+  .reqs{display:grid;gap:14px;counter-reset:r}
+  .req{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;background:var(--panel);border:1px solid var(--panel-line);border-radius:12px}
+  .req::before{counter-increment:r;content:counter(r,decimal-leading-zero);font-family:var(--display);font-weight:700;color:var(--accent);font-size:.95rem;min-width:28px}
+  .req span{color:var(--muted)}
+  .req span b{color:var(--ink);font-weight:500}
+
+  /* cctv callout */
+  .callout{
+    border:1px solid rgba(255,122,138,.3);border-radius:16px;padding:32px;
+    background:linear-gradient(135deg,rgba(40,12,18,.5),rgba(13,30,42,.4));
+  }
+  .callout .tag{font-family:var(--display);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--danger);margin-bottom:14px;display:block}
+  .callout p{color:var(--muted)}
+  .callout strong{color:var(--ink);font-weight:500}
+
+  /* footer / contact */
+  footer{border-top:1px solid var(--line);padding:64px 0 48px;margin-top:30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end}
+  footer h2{font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3vw,2.2rem)}
+  footer p{color:var(--muted);max-width:48ch;margin-top:14px}
+  .foot-meta{font-size:.78rem;color:var(--faint);letter-spacing:.06em;line-height:2}
+  .foot-meta a:hover{color:var(--accent)}
+  .legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:.74rem;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .nav-links,.nav-cta{display:none}
+    .menu-btn{display:block}
+    .ring{width:320px;right:-120px;opacity:.5}
+    .strip .grid{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(2){border-right:0}
+    .cards{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  /* honour reduced motion */
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand"><span class="dot"></span> PATIENT&nbsp;SAFETY&nbsp;COMPLAINT</div>
+    <ul class="nav-links">
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#failures">Failures</a></li>
+      <li><a href="#requests">Requests</a></li>
+      <li><a href="#cctv">CCTV</a></li>
+    </ul>
+    <a class="nav-cta" href="#requests">To the Commission →</a>
+    <button class="menu-btn" aria-label="Menu" id="menuBtn">≡</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap reveal">
+    <div class="eyebrow">Formal complaint · Punjab Healthcare Commission</div>
+    <h1>A life lost during <span class="glow">dialysis</span> — and a call for accountability</h1>
+    <p class="lead">On 27 December 2025, my father died during a dialysis session at Hearts International
+      Hospital, Rawalpindi. This is a formal request for an independent investigation into the monitoring,
+      staffing, emergency response, and handling of evidence surrounding his death.</p>
+    <div class="meta">Hearts International Hospital · Rawalpindi · 26–27 December 2025</div>
+    <div class="actions">
+      <a class="btn btn-primary" href="#requests">Read the request →</a>
+      <a class="btn btn-ghost" href="#timeline">See the timeline</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<div class="strip">
+  <div class="wrap"><div class="grid">
+    <div class="stat"><div class="n">~13:00</div><div class="l">Dialysis began</div></div>
+    <div class="stat"><div class="n">~2 min</div><div class="l">Until staff left machine</div></div>
+    <div class="stat"><div class="n">20–25 min</div><div class="l">Nephrologist return delay</div></div>
+    <div class="stat"><div class="n">7 / 7</div><div class="l">Creatinine / Potassium</div></div>
+  </div></div>
+</div>
+
+<!-- SUMMARY -->
+<section class="block" id="summary">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">The incident</span>
+      <h2>What happened</h2>
+    </div>
+    <div class="panel lede-panel reveal">
+      My father was admitted on <strong>26 December 2025</strong> with critically high creatinine (7) and
+      potassium (7), and we were assured of <strong>urgent dialysis</strong>. The nephrologist arrived on
+      27 December 2025, but dialysis was delayed until approximately <strong>13:00</strong>.
+      <br /><br />
+      At the start of dialysis, the nephrologist was present only briefly — for about one minute — reviewed
+      the patient file, and left. The dialysis technician initiated the machine and left within approximately
+      two minutes. The patient then remained on <strong>active dialysis without continuous qualified
+      monitoring</strong>.
+      <br /><br />
+      During this unattended period, <strong>visible significant bleeding occurred but was not immediately
+      recognised</strong>. Medical staff were present nearby but were not engaged in active patient monitoring.
+      The patient suddenly collapsed and became unresponsive. <strong>Hypovolemic shock was recognised only at
+      a late stage.</strong> An emergency response was initiated, but it lacked dialysis-specific expertise —
+      neither the dialysis technician nor the nephrologist was present at the time. The technician did not
+      return, and the nephrologist arrived approximately 20–25 minutes after dialysis had started.
+      <strong>The patient did not survive.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="block" id="timeline">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Sequence of events</span>
+      <h2>Timeline</h2>
+      <p>A factual account of the sequence as witnessed, from admission to the emergency response.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl">
+        <div class="t">26 Dec 2025 · Admission</div>
+        <div class="b">Patient admitted with critically high creatinine (7) and potassium (7). Family assured of urgent dialysis.</div>
+      </div>
+      <div class="tl">
+        <div class="t">27 Dec 2025 · Morning</div>
+        <div class="b">Nephrologist arrives. Despite the urgency, dialysis is delayed until approximately 13:00.</div>
+      </div>
+      <div class="tl">
+        <div class="t">~13:00 · Dialysis begins</div>
+        <div class="b">Nephrologist present for about one minute, reviews the file, and leaves. The dialysis technician initiates the machine and leaves within approximately two minutes.</div>
+      </div>
+      <div class="tl critical">
+        <div class="t">Unattended period · Bleeding</div>
+        <div class="b">Patient on active dialysis without continuous qualified monitoring. Visible significant bleeding occurs but is not immediately recognised. Staff nearby are not actively monitoring.</div>
+      </div>
+      <div class="tl critical">
+        <div class="t">Collapse · Hypovolemic shock</div>
+        <div class="b">Patient suddenly collapses and becomes unresponsive. Hypovolemic shock is recognised only at a late stage.</div>
+      </div>
+      <div class="tl critical">
+        <div class="t">Emergency response</div>
+        <div class="b">Response initiated but lacking dialysis-specific expertise — neither the technician nor the nephrologist is present. Technician does not return; nephrologist arrives ~20–25 minutes after dialysis started.</div>
+      </div>
+      <div class="tl critical">
+        <div class="t">Outcome</div>
+        <div class="b">The patient did not survive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAILURES -->
+<section class="block" id="failures">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Concerns raised</span>
+      <h2>Points requiring investigation</h2>
+      <p>The following aspects of care appear to fall short of expected patient-safety standards and warrant independent review.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="num">01</div><h3>Delayed urgent dialysis</h3><p>Despite life-threatening creatinine and potassium levels and assurances of urgency, dialysis was delayed until approximately 13:00.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>No continuous monitoring</h3><p>The patient remained on active dialysis without continuous qualified supervision after the nephrologist and technician left within minutes.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Unrecognised bleeding</h3><p>Visible significant bleeding occurred during the unattended period and was not immediately recognised by the staff present.</p></div>
+      <div class="card reveal"><div class="num">04</div><h3>Late recognition of shock</h3><p>Hypovolemic shock was identified only at a late stage, after the patient had already collapsed and become unresponsive.</p></div>
+      <div class="card reveal"><div class="num">05</div><h3>Inadequate emergency response</h3><p>The response lacked dialysis-specific expertise; neither the technician nor the nephrologist was present when it was most needed.</p></div>
+      <div class="card reveal"><div class="num">06</div><h3>Response & return delays</h3><p>The technician did not return, and the nephrologist arrived approximately 20–25 minutes after dialysis started.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUESTS -->
+<section class="block" id="requests">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">To the Punjab Healthcare Commission</span>
+      <h2>Specific requests to the Commission</h2>
+      <p>I request the Punjab Healthcare Commission to conduct an independent investigation and to secure and review the relevant evidence.</p>
+    </div>
+    <div class="reqs reveal">
+      <div class="req"><span>Conduct an <b>independent investigation into dialysis monitoring</b> and the standard of supervision provided during the session.</span></div>
+      <div class="req"><span>Examine <b>staffing presence</b> — whether qualified personnel remained with the patient throughout active dialysis.</span></div>
+      <div class="req"><span>Investigate the <b>response delay</b> and the adequacy of the emergency response to the patient's deterioration.</span></div>
+      <div class="req"><span>Assess <b>adherence to safety protocols</b> for dialysis from CVP connection through the full session.</span></div>
+      <div class="req"><span>Review the <b>handling of CCTV evidence</b>, including the hospital's refusal to provide a copy.</span></div>
+      <div class="req"><span><b>Secure and review the complete CCTV footage</b> from the time of CVP connection through the entire dialysis session, and take appropriate regulatory action.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CCTV -->
+<section class="block" id="cctv">
+  <div class="wrap reveal">
+    <div class="callout">
+      <span class="tag">⚠ Evidence concern · CCTV</span>
+      <h2 style="font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:14px">The footage exists — but a copy was refused</h2>
+      <p>I requested the CCTV footage <strong>in writing</strong>. The hospital <strong>acknowledged its existence</strong>
+      and <strong>showed me the footage</strong>, but later <strong>refused to provide a copy</strong>, citing
+      “hospital policy” — without providing any written refusal or a copy of the policy.</p>
+      <p style="margin-top:16px">A written application was submitted to the <strong>COO (In-charge of the Healthcare
+      Establishment)</strong>. To date, <strong>no written response and no policy document have been provided.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid reveal">
+      <div>
+        <h2>Seeking a fair, independent review</h2>
+        <p>This site documents a patient-safety complaint in the words of the complainant. It seeks
+        accountability, the preservation of evidence, and improvements that protect future patients.</p>
+      </div>
+      <div class="foot-meta">
+        <div><strong style="color:var(--ink)">Establishment</strong><br />Hearts International Hospital, Rawalpindi</div>
+        <br />
+        <div><strong style="color:var(--ink)">Regulator</strong><br /><a href="https://www.phc.org.pk" target="_blank" rel="noopener">Punjab Healthcare Commission</a></div>
+        <br />
+        <div><strong style="color:var(--ink)">Incident date</strong><br />27 December 2025</div>
+      </div>
+    </div>
+    <div class="wrap legal" style="padding-left:0;padding-right:0">
+      <span>Prepared by the complainant · This is a personal account submitted for regulatory review.</span>
+      <span>© 2026 · In loving memory.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // simple mobile menu: jump to requests
+  document.getElementById('menuBtn')?.addEventListener('click',()=>{
+    document.getElementById('requests').scrollIntoView({behavior:'smooth'});
+  });
+</script>
+</body>
+</html>
