@@ -408,6 +408,10 @@
 </footer>
 
 <script>
+  // always start at the top, ignore any #section left in the URL on load
+  if (location.hash) { history.replaceState(null, '', location.pathname); }
+  window.scrollTo(0, 0);
+
   // scroll reveal
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
