@@ -13,7 +13,7 @@ const OUT = path.join(__dirname, "..", "assets", "img");
 const imgs = [
   ["hero.jpg",         "hf_20260619_063700_eae73e82-bf7f-4894-90e4-b187c6a9df2e.png", 1680],
   ["interior.jpg",     "hf_20260619_063701_85506fb8-d3c1-4f10-82c3-db8ec0ebc3bd.png", 1680],
-  ["bride.jpg",        "hf_20260619_063709_491cc151-8eb7-4ad7-b8b8-89f4e35f8a84.png", 1280],
+  ["bride.jpg",        "hf_20260619_064944_a4959333-befb-4007-bfb7-b28d0540ea45.png", 1280],
   ["hair.jpg",         "hf_20260619_063712_b60ec50a-f8fd-4143-b3dd-034c12825afb.png", 1280],
   ["keratin.jpg",      "hf_20260619_063714_702fd52d-584c-4326-b97c-9655d30d9529.png", 1280],
   ["facial.jpg",       "hf_20260619_063715_f30c7243-16fa-42b0-8ddc-6c8f64463364.png", 1280],
